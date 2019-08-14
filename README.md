@@ -22,7 +22,7 @@ cd neo4j-community-3.5.8
 mkdir data/databases/demo.db
 ```
 
-4. Import data files using neo4j-import command
+4. Import data files using neo4j-import command (scroll right --->)
 ```bash
 ./bin/neo4j-import --into data/databases/demo.db/ --nodes case.nodes.gz --nodes gene.nodes.gz --nodes sample.nodes.gz --relationships case_sample.edges.gz --relationships sample_gene.edges.gz
 ```
@@ -33,12 +33,13 @@ mkdir data/databases/demo.db
  ./bin/neo4j start
 ```
 * Open a browser and go to URL http://localhost:7474/
-* Change the default password to neo4j to SOME PASSWORD.
+* Change the default password ie. neo4j to SOME PASSWORD.
 
-6. Extract the clinical files and update the graph database with clinical information. Also edit the updateClinical.py and change the password from PASSWORD to 'SOME PASSWORD'
+6. Extract the clinical files and update the graph database with clinical information. Also edit the updateClinical.py and change the password from PASSWORD to 'SOME PASSWORD' from previous step.
 
 ```bash
 gunzip clinical.gz
+cd ../../
 python updateClinical.py -c demo/neo4j-community-3.5.8/clinical
 ``` 
 
