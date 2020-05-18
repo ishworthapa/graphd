@@ -1,5 +1,7 @@
-# graphd
-Graph database for multi-omics data
+# graphd version 2.0
+Graph database for multi-omics data (version 2.0)
+
+If you are looking for previous version (v1.0) that appeared in ICCABS 2019, please [click here](https://github.com/ishworthapa/graphd/releases).
 
 # Steps for populating the database and running the server
 1. Change the directory
