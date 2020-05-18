@@ -42,8 +42,15 @@ gunzip clinical.gz
 cd ../../
 python updateClinical.py -c demo/neo4j-community-3.5.8/clinical
 ``` 
+7. Update the graph database with copy number variation, miRNA expression, tissue slide information and gene lengths.
+The following bash command will prompt of your password that you set it up in the step5.
+```bash
+./bin/cypher-shell -a bolt://0.0.0.0:7687 -u neo4j
+```
+In the cypher-shell, execute the cypher queries given in [populateDB](https://github.com/ishworthapa/graphd/tree/master/populateDB) folder shared with this github repository.
+```
 
-7. Example Query
+8. Example Query
 * In the browser, Enter the following query 
 ```bash
 $ match p=(c:Case)-[hs:HAS_SAMPLE]-(s:Sample)-[:HAS_EXPRESSION]->(g:Gene) return p limit 5
