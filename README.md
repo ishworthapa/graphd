@@ -43,7 +43,7 @@ cd ../../
 python updateClinical.py -c demo/neo4j-community-3.5.8/clinical
 ``` 
 7. Update the graph database with copy number variation, miRNA expression, tissue slide information and gene lengths.
-The following bash command will prompt of your password that you set it up in the step5.
+The following bash command will prompt for your password that you set it up in the step5.
 ```bash
 ./bin/cypher-shell -a bolt://0.0.0.0:7687 -u neo4j
 ```
